@@ -1,10 +1,9 @@
 import 'dart:io';
 
-import 'package:blive_delivery_exec/responsive/app_screen_util.dart';
-import 'package:blive_delivery_exec/style/constants/app_colors.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:instagram_clone/responsive/app_screen_util.dart';
 import 'package:lottie/lottie.dart';
 
 ///This is just an abstraction class of the [SvgPicture] library
@@ -90,7 +89,7 @@ class ImageLoader {
           children: [
             Icon(
               Icons.error_outline,
-              color: AppColors.semantic01,
+              color: Colors.red,
               size: errorlogoHeight ?? 40.heightMultiplier,
             ),
           ],

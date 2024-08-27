@@ -1,6 +1,6 @@
-import 'package:blive_delivery_exec/router/app_routes.dart';
-import 'package:blive_delivery_exec/style/constants/custom_text_style.dart';
+ 
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/routers/app_routes.dart';
 
 abstract class AppSnackBar {
   AppSnackBar._();
@@ -21,7 +21,7 @@ abstract class AppSnackBar {
       content: content ??
           Text(
             text ?? 'Opps! Message is not clear.',
-            style: CustomTextStyle.body2M(),
+           
           ),
     );
   }

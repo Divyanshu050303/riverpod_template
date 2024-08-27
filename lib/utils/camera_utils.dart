@@ -1,12 +1,9 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:blive_delivery_exec/utils/toast_util.dart';
 import 'package:camera/camera.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:instagram_clone/utils/toast_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
-
-import '../gen/translation/locale_keys.g.dart';
 
 /// A utility class for working with the camera in a Flutter application.
 /// This class provides methods for initializing the camera, taking pictures

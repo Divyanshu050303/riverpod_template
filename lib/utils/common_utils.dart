@@ -1,13 +1,9 @@
-import 'package:blive_delivery_exec/constants/constants.dart';
-import 'package:blive_delivery_exec/router/app_routes.dart';
-import 'package:blive_delivery_exec/style/constants/app_colors.dart';
 import 'package:camera/camera.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:file_picker/file_picker.dart';
-// import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-
-import 'toast_util.dart';
+import 'package:instagram_clone/routers/app_routes.dart';
+import 'package:instagram_clone/utils/toast_utils.dart';
+import 'package:file_picker/file_picker.dart';
 
 class CommonUtil {
   static Future<XFile?> pickFile({
@@ -22,6 +18,7 @@ class CommonUtil {
 
     final file = result?.files.firstOrNull;
     final filePath = file?.path;
+    final maxFileSize = 2000000;
     if (filePath != null) {
       final size = file?.size;
       if ((size ?? 0) < maxFileSize) {
@@ -45,13 +42,13 @@ class CommonUtil {
       builder: (context, child) {
         return Theme(
           data: Theme.of(context).copyWith(
-            primaryColor: AppColors.primary01,
+            primaryColor: Colors.cyan.shade200,
             colorScheme: ColorScheme.light(
-              primary: AppColors.primary01,
+              primary: Colors.cyan.shade200,
             ),
             textButtonTheme: TextButtonThemeData(
               style: TextButton.styleFrom(
-                foregroundColor: AppColors.black,
+                foregroundColor: Colors.black,
               ),
             ),
           ),
