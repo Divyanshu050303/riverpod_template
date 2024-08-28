@@ -5,6 +5,9 @@ import 'package:instagram_clone/core/api_client/api_exception.dart';
 import 'package:instagram_clone/core/api_client/api_result.dart';
 import 'package:instagram_clone/core/api_client/header_interceptors.dart';
 import 'package:instagram_clone/core/api_client/retry_on_connection_change_interceptor.dart';
+import 'package:instagram_clone/routers/app_routes.dart';
+import 'package:instagram_clone/routers/routes.dart';
+import 'package:instagram_clone/utils/storage_utils.dart';
 
 typedef JsonMap = Map<String, dynamic>;
 
@@ -154,7 +157,7 @@ class DioUtil {
       int? statusCode = response?.statusCode;
       if (statusCode == 403) {
         SecureStorage.instance.deleteAll();
-        AppRoutes.AppRouter.pushReplacement(Routes.sigin);
+        AppRoutes.appRouter.pushReplacement(Routes.signIn);
       }
       String? errorMessage;
       try {

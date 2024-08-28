@@ -101,14 +101,13 @@ class CameraUtil {
       switch (e.code) {
         case 'CameraAccessDenied':
           ToastUtil.showToast(
-            message: LocaleKeys.cameraUtil_have_denied_camera_access.tr(),
+            message: "cameraUtil have denied camera access",
           );
           break;
         case 'CameraAccessDeniedWithoutPrompt':
           // iOS only
           ToastUtil.showToast(
-            message:
-                LocaleKeys.cameraUtil_please_go_settings_camera_access.tr(),
+            message: "cameraUtil please go settings camera access",
           );
           openAppSettings();
           break;
@@ -116,7 +115,7 @@ class CameraUtil {
           // iOS only
 
           ToastUtil.showToast(
-            message: LocaleKeys.cameraUtil_camera_Access_restricted.tr(),
+            message: "CameraUtil camera Access restricted",
           );
           break;
 
@@ -127,7 +126,7 @@ class CameraUtil {
 
       openAppSettings();
       ToastUtil.showToast(
-        message: LocaleKeys.cameraUtil_provide_camera_permission.tr(),
+        message: "cameraUtil  provide_camera_permission",
       );
     }
   }
